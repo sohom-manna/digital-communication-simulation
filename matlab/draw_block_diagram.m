@@ -61,7 +61,7 @@ function draw_block_diagram(out_file)
     plot(ax, [6 1.5 1.5], [113 113 6], '--', 'Color', [0.45 0.45 0.45], 'LineWidth', 1.3);
     draw_arrow(ax, 1.5, 6, 6, 6, [0.45 0.45 0.45]);
     text(-2.2, 60, 'transmitted bits (reference)', 'Parent', ax, 'Rotation', 90, ...
-         'FontSize', 10, 'HorizontalAlignment', 'center', 'Color', [0.35 0.35 0.35]);
+         'FontSize', 10, 'HorizontalAlignment', 'center', 'Color', 'k');
 
     print(fig, '-dpng', '-r150', out_file);
     close(fig);
@@ -83,7 +83,7 @@ function draw_box(ax, x, y, w, h, lines, face_color, edge_color)
         end
         text(x + w / 2, first_y - (k - 1) * line_gap, lines{k}, 'Parent', ax, ...
              'HorizontalAlignment', 'center', 'VerticalAlignment', 'middle', ...
-             'FontWeight', weight, 'FontSize', size_pt);
+             'FontWeight', weight, 'FontSize', size_pt, 'Color', 'k');
     end
 end
 
