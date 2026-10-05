@@ -193,7 +193,11 @@ xvfb-run -a octave --no-gui matlab/main.m
 
 `main.m` runs the simulations (about 10 seconds), writes all figures into `results/` and `figures/`, writes `results/ber_results.csv`, prints a summary table and runs the validation checks (every line should read `[PASS]`).
 
-**Tested with:** GNU Octave 8.4.0 on Ubuntu 24.04 (Qt graphics toolkit under Xvfb; packages installed in the test environment: `octave`, `gnuplot-nox`, `ghostscript`, `fonts-freefont-otf`, `xvfb`). The code uses only base MATLAB functions and syntax that is valid in both environments, but it **has not yet been run in MATLAB**. Exact random numbers differ between MATLAB and Octave (different random number initialisation and normal generators), so the BER values will differ slightly while agreeing with theory statistically. Within one environment, results are exactly reproducible for a fixed seed.
+Tested with:
+- MATLAB R2025b on Windows 11
+- GNU Octave 8.4.0 on Ubuntu 24.04
+
+The code uses only base MATLAB functions and syntax that is valid in both environments. The MATLAB R2025b run completed successfully, including all automated validation checks. Exact random numbers may differ between MATLAB and Octave because the environments use different random-number implementations; however, the BER results agree with theory statistically. Within the same environment, results are reproducible for a fixed seed.
 
 ## Project Structure
 
