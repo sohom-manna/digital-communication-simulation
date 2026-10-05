@@ -133,23 +133,23 @@ Received symbols from the simulation itself at three $E_b/N_0$ values. Colour = 
 
 ### Numerical results
 
-Generated run (`results/ber_results.csv`; seed 42 for BPSK, seed 43 for QPSK):
+Generated run in MATLAB R2025b (`results/ber_results.csv`; seed 42 for BPSK, seed 43 for QPSK):
 
-| Eb/N0 (dB) | Theory BER | BPSK simulated BER | QPSK simulated BER | BPSK bits / errors | QPSK bits / errors |
-|---:|---:|---:|---:|---:|---:|
-| 0 | 7.865e-2 | 7.838e-2 | 7.834e-2 | 1,000,000 / 78,383 | 1,000,000 / 78,337 |
-| 1 | 5.628e-2 | 5.645e-2 | 5.632e-2 | 1,000,000 / 56,455 | 1,000,000 / 56,316 |
-| 2 | 3.751e-2 | 3.765e-2 | 3.741e-2 | 1,000,000 / 37,652 | 1,000,000 / 37,412 |
-| 3 | 2.288e-2 | 2.296e-2 | 2.282e-2 | 1,000,000 / 22,965 | 1,000,000 / 22,823 |
-| 4 | 1.250e-2 | 1.249e-2 | 1.272e-2 | 1,000,000 / 12,491 | 1,000,000 / 12,720 |
-| 5 | 5.954e-3 | 6.065e-3 | 5.891e-3 | 1,000,000 / 6,065 | 1,000,000 / 5,891 |
-| 6 | 2.388e-3 | 2.348e-3 | 2.428e-3 | 1,000,000 / 2,348 | 1,000,000 / 2,428 |
-| 7 | 7.727e-4 | 8.080e-4 | 7.720e-4 | 1,000,000 / 808 | 1,000,000 / 772 |
-| 8 | 1.909e-4 | 1.770e-4 | 1.930e-4 | 1,000,000 / 177 | 1,000,000 / 193 |
-| 9 | 3.363e-5 | 3.400e-5 | 3.450e-5 | 3,000,000 / 102 | 4,000,000 / 138 |
-| 10 | 3.872e-6 | 3.889e-6 | 4.545e-6 | 27,000,000 / 105 | 22,000,000 / 100 |
+Eb/N0 (dB) | Theory BER | BPSK simulated BER | QPSK simulated BER | QPSK simulated SER | BPSK bits / errors | QPSK bits / errors
+--- | --- | --- | --- | --- | --- | ---
+0  | 7.865e-2 | 7.8693e-2 | 7.8775e-2 | 1.5128e-1 | 1,000,000 / 78,693 | 1,000,000 / 78,775
+1  | 5.628e-2 | 5.5841e-2 | 5.6434e-2 | 1.0982e-1 | 1,000,000 / 55,841 | 1,000,000 / 56,434
+2  | 3.751e-2 | 3.7624e-2 | 3.7464e-2 | 7.3476e-2 | 1,000,000 / 37,624 | 1,000,000 / 37,464
+3  | 2.288e-2 | 2.2899e-2 | 2.3209e-2 | 4.5902e-2 | 1,000,000 / 22,899 | 1,000,000 / 23,209
+4  | 1.250e-2 | 1.2502e-2 | 1.2479e-2 | 2.4802e-2 | 1,000,000 / 12,502 | 1,000,000 / 12,479
+5  | 5.954e-3 | 5.9510e-3 | 6.1090e-3 | 1.2186e-2 | 1,000,000 / 5,951 | 1,000,000 / 6,109
+6  | 2.388e-3 | 2.4240e-3 | 2.4310e-3 | 4.8480e-3 | 1,000,000 / 2,424 | 1,000,000 / 2,431
+7  | 7.727e-4 | 7.8900e-4 | 7.5400e-4 | 1.5080e-3 | 1,000,000 / 789 | 1,000,000 / 754
+8  | 1.909e-4 | 1.8000e-4 | 2.1400e-4 | 4.2800e-4 | 1,000,000 / 180 | 1,000,000 / 214
+9  | 3.363e-5 | 3.0250e-5 | 3.3750e-5 | 6.7500e-5 | 4,000,000 / 121 | 4,000,000 / 135
+10 | 3.872e-6 | 4.0400e-6 | 3.3333e-6 | 6.6667e-6 | 25,000,000 / 101 | 30,000,000 / 100
 
-These numbers come from one pair of random seeds. Different seeds (or MATLAB instead of Octave, see below) give slightly different values within the statistical uncertainty.
+These values come from the MATLAB R2025b run included with this repository. Because this is a Monte Carlo simulation, small differences from the theoretical BER are expected. The exact values are reproducible within the same MATLAB environment for the fixed random seeds.
 
 ## Theoretical vs Simulated Performance
 
