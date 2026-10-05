@@ -1,0 +1,15 @@
+# MATLAB / Octave temporary and generated files
+*.asv
+*.m~
+*.autosave
+*.mex*
+*.mat
+octave-workspace
+slprj/
+codegen/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
